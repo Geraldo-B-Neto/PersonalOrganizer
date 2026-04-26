@@ -1,0 +1,217 @@
+/*
+ * ================================================================
+ *  TYPOGRAPHY.CSS — Sistema Tipográfico
+ *  Depende de: tokens.css
+ *
+ *  Classes semânticas de texto usadas em todo o DS.
+ *  Prefixo .type-- para escalas de texto.
+ *  Prefixo .ds-font-* para componentes de showcase tipográfico.
+ * ================================================================
+ */
+
+/* ============================================================
+   ESCALA DE TEXTO — Classes Semânticas
+   Uso: aplique diretamente em qualquer tag HTML
+============================================================ */
+
+/* Hero / Display */
+.type--display-xl {
+  font-family: var(--font-serif);
+  font-size: var(--text-hero);
+  font-weight: 300;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Headings */
+.type--h1 {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: 300;
+  line-height: var(--leading-snug);
+}
+
+.type--h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: var(--leading-snug);
+}
+
+.type--h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  line-height: var(--leading-relaxed);
+}
+
+.type--h4 {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+}
+
+/* Body */
+.type--body-lg {
+  font-family: var(--font-tenor);
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+}
+
+.type--body {
+  font-family: var(--font-tenor);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+}
+
+.type--body-sm {
+  font-family: var(--font-tenor);
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+}
+
+/* UI de texto */
+.type--caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-muted);
+}
+
+.type--label {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   LINK COM UNDERLINE ANIMADO
+   Baseado no padrão de hover do Horderly / Simply Spaced
+============================================================ */
+.link-animated {
+  position: relative;
+  display: inline-block;
+}
+
+.link-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--transition-base);
+}
+
+.link-animated:hover::after {
+  width: 100%;
+}
+
+/* ============================================================
+   DS SHOWCASE — Typography Section Components
+   Usados apenas na página de documentação do Design System
+============================================================ */
+
+/* ── Escala de tipos (tabela) ─────────────────────────────── */
+.ds-type-scale {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.ds-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 767px) {
+  .ds-type-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}
+
+.ds-type-meta {
+  min-width: 200px;
+  flex-shrink: 0;
+}
+
+.ds-type-label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.ds-type-spec {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+}
+
+.ds-type-sample {
+  flex: 1;
+}
+
+/* ── Font card (showcase de família) ───────────────────────── */
+.ds-font-card {
+  padding: var(--space-8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-alt);
+}
+
+.ds-font-card-name {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.ds-font-card-sample-serif {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.ds-font-card-sample-sans {
+  font-family: var(--font-sans);
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.ds-font-weights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+  font-size: var(--text-md);
+}
+
+/* ============================================================
+   EDITORIAL OVERRIDES — Specific Requested Elements
+============================================================ */
+.cta-centered__desc,
+.po-footer .type--caption,
+.po-testimonial-signature {
+  font-family: var(--font-tenor);
+}

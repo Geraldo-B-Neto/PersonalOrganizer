@@ -1,0 +1,256 @@
+/*
+ * ================================================================
+ *  TOKENS.CSS — Design Tokens
+ *  Fonte: Horderly · Simply Spaced · The Home Edit
+ * ================================================================
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=Tenor+Sans&family=Ms+Madi&display=swap');
+
+:root {
+
+   /* ============================================================
+     CORES — Site de Referência: Horderly (Lavanda/Neutro)
+  ============================================================ */
+   --horderly-accent: #b8adbe;
+   /* lavanda suave — botões, links, bordas */
+   --horderly-accent-dark: #9f91a8;
+   /* hover */
+   --horderly-bg: #ffffff;
+   --horderly-bg-alt: #f5f5f5;
+   /* seções, formulários, rodapé */
+   --horderly-text: #131313;
+   /* quase preto */
+   --horderly-text-light: #000000;
+
+   /* ============================================================
+     CORES — Site de Referência: Simply Spaced (Neutro Quente)
+  ============================================================ */
+   --ss-bg: #ffffff;
+   --ss-bg-alt: #faf7f4;
+   /* creme muito suave */
+   --ss-text: #1a1a1a;
+   --ss-accent: #8c7d72;
+   /* marrom-areia suave */
+   --ss-accent-light: #c9bdb6;
+
+   /* ============================================================
+     CORES — Site de Referência: The Home Edit (Paleta Estruturada)
+  ============================================================ */
+   --the-cream: #fffdfa;
+   --the-black: #1c1b1f;
+   --the-imagebg: #f5f5f5;
+   --the-outline: #d9d9d9;
+   --the-accent: #a5a5a5;
+
+   /* Verdes */
+   --the-lightgreen: #c2dc97;
+   --the-midgreen: #64a85e;
+   --the-darkgreen: #325132;
+   --the-darkgreen-hover: #192819;
+
+   /* Amarelos */
+   --the-lightyellow: #faf0a8;
+   --the-darkyellow: #eae062;
+   --the-darkyellow-hover: #f4ec8c;
+
+   /* Laranjas */
+   --the-lightorange: #ffa04d;
+   --the-lightorange-hover: #ffc18a;
+   --the-midorange: #ef4e21;
+
+   /* Vermelhos */
+   --the-midred: #b90026;
+   --the-midred-hover: #85001c;
+   --the-darkred: #74132e;
+   --the-darkred-hover: #390916;
+
+   /* Azuis */
+   --the-lightblue: #becaee;
+   --the-lightblue-hover: #e0e5f7;
+   --the-midblue: #5d93c7;
+   --the-darkblue: #292b62;
+   --the-darkblue-hover: #141530;
+
+   /* Roxos */
+   --the-lightpurple: #ddbfed;
+   --the-lightpurple-hover: #eee0f6;
+   --the-midpurple: #b091e7;
+   --the-darkpurple: #3b015f;
+   --the-darkpurple-hover: #1d012f;
+
+   /* Rosas */
+   --the-lightpink: #fcd2cf;
+   --the-lightpink-hover: #ffe3e1;
+   --the-midpink: #f8a2ac;
+   --the-midpink-hover: #fcd2d6;
+   --the-darkpink: #f45e8b;
+
+   /* ============================================================
+     CORES — Paleta Sintetizada (DS Próprio)
+  ============================================================ */
+   --color-bg: #ffffff;
+   --color-bg-alt: #f7f5f2;
+   /* neutro quente */
+   --color-bg-section: #f0ede9;
+   --color-text: #1c1a18;
+   --color-text-muted: #6b6560;
+   --color-accent: #b8adbe;
+   /* lavanda Horderly */
+   --color-accent-warm: #c9bdb6;
+   /* areia Simply Spaced */
+   --color-accent-vivid: #5d93c7;
+   /* azul The Home Edit */
+   --color-border: #e2ddd8;
+   --color-border-strong: #b8adbe;
+   --color-success: #64a85e;
+   --color-error: #b90026;
+   --color-warning: #eae062;
+
+   /* ============================================================
+     TIPOGRAFIA — Famílias de Fonte
+     Horderly:   Nantes (serif) + Futura PT (sans)
+     Simply Sp.: Futura PT
+     The Home Edit: HW Cigars (display) + Grosa (sans)
+     Substitutos Google Fonts: Cormorant Garamond + DM Sans
+  ============================================================ */
+   --font-serif: 'Cormorant Garamond', 'Nantes', Georgia, serif;
+   --font-sans: 'DM Sans', sans-serif;
+   --font-tenor: 'Tenor Sans', sans-serif;
+   --font-display: 'Cormorant Garamond', serif;
+   --font-mono: 'Courier New', Courier, monospace;
+
+   /* ============================================================
+     TIPOGRAFIA — Escala de Tamanhos (base 16px)
+  ============================================================ */
+   --text-xs: 0.75rem;
+   /*  12px */
+   --text-sm: 0.875rem;
+   /*  14px */
+   --text-base: 1rem;
+   /*  16px */
+   --text-md: 1.125rem;
+   /*  18px */
+   --text-lg: 1.1875rem;
+   /*  19px  — Horderly h3 */
+   --text-xl: 1.625rem;
+   /*  26px  — Horderly h2 */
+   --text-2xl: 2rem;
+   /*  32px  — THE h3 */
+   --text-3xl: 2.5rem;
+   /*  40px */
+   --text-4xl: 2.625rem;
+   /*  42px  — Horderly h1 */
+   --text-5xl: 3.6rem;
+   /*  57.6px — THE h2 */
+   --text-6xl: 4rem;
+   /*  64px  — THE h1 */
+   --text-hero: clamp(2.625rem, 5vw, 6rem);
+
+   /* ============================================================
+     TIPOGRAFIA — Line Heights
+  ============================================================ */
+   --leading-tight: 1.1;
+   --leading-snug: 1.2;
+   --leading-normal: 1.4;
+   --leading-relaxed: 1.6;
+   --leading-loose: 1.75;
+
+   /* ============================================================
+     TIPOGRAFIA — Letter Spacing
+  ============================================================ */
+   --tracking-tight: -0.02em;
+   --tracking-normal: 0;
+   --tracking-wide: 0.06em;
+   --tracking-wider: 0.12em;
+   --tracking-widest: 0.2em;
+
+   /* ============================================================
+     ESPAÇAMENTO — Escala (múltiplos de 4px)
+  ============================================================ */
+   --space-1: 0.25rem;
+   /*   4px */
+   --space-2: 0.5rem;
+   /*   8px */
+   --space-3: 0.75rem;
+   /*  12px */
+   --space-4: 1rem;
+   /*  16px */
+   --space-5: 1.25rem;
+   /*  20px */
+   --space-6: 1.5rem;
+   /*  24px — gutter padrão */
+   --space-7: 1.75rem;
+   /*  28px */
+   --space-8: 2rem;
+   /*  32px */
+   --space-10: 2.5rem;
+   /*  40px */
+   --space-12: 3rem;
+   /*  48px — THE padding interno */
+   --space-16: 4rem;
+   /*  64px */
+   --space-20: 5rem;
+   /*  80px — padding de seção */
+   --space-24: 6rem;
+   /*  96px */
+   --space-32: 8rem;
+   /* 128px — seções grandes */
+
+   /* ============================================================
+     LAYOUT — Containers e Gutter
+  ============================================================ */
+   --container-max: 1380px;
+   /* Horderly */
+   --container-xl: 1320px;
+   /* The Home Edit xxl */
+   --container-lg: 1140px;
+   --container-sm: 720px;
+   --gutter: 1.5rem;
+   --gutter-md: 2.4rem;
+   --gutter-lg: 4.8rem;
+
+   /* ============================================================
+     BORDAS E RAIOS
+  ============================================================ */
+   --radius-none: 0;
+   --radius-sm: 2px;
+   --radius-md: 4px;
+   --radius-lg: 8px;
+   --radius-xl: 16px;
+   --radius-full: 9999px;
+   --border-width: 1px;
+
+   /* ============================================================
+     SOMBRAS
+  ============================================================ */
+   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.10);
+
+   /* ============================================================
+     TRANSIÇÕES
+  ============================================================ */
+   --transition-fast: 150ms ease;
+   --transition-base: 250ms ease;
+   --transition-slow: 400ms ease;
+
+   /* ============================================================
+     Z-INDEX
+  ============================================================ */
+   --z-base: 0;
+   --z-raised: 10;
+   --z-overlay: 100;
+   --z-modal: 1000;
+   --z-header: 4;
+
+   /* ============================================================
+     BREAKPOINTS — referência para uso em calc() e JS
+     (Media queries diretas devem usar valores literais)
+  ============================================================ */
+   --bp-sm: 480px;
+   --bp-md: 768px;
+   --bp-lg: 1100px;
+   --bp-xl: 1280px;
+   --bp-2xl: 1440px;
+}

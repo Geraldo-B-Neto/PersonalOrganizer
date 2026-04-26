@@ -1,0 +1,265 @@
+/*
+ * ================================================================
+ *  THEMES.CSS — Overrides por Cliente / Contexto
+ *  Depende de: tokens.css, components.css
+ *
+ *  Cada tema é ativado por uma classe no elemento raiz
+ *  (ex.: <body class="theme--horderly">).
+ *
+ *  Padrão inspirado no sistema de color-theme--* do The Home Edit,
+ *  que aplica pares de cores ao utility-bar e footer por página.
+ * ================================================================
+ */
+
+/* ============================================================
+   TEMA BASE: Horderly
+   Lavanda/Neutro — botões #b8adbe, fundo branco/cinza claro
+   Tipografia serif para headings, sans para corpo
+============================================================ */
+.theme--horderly {
+  --color-accent:        var(--horderly-accent);
+  --color-accent-dark:   var(--horderly-accent-dark);
+  --color-bg:            var(--horderly-bg);
+  --color-bg-alt:        var(--horderly-bg-alt);
+  --color-text:          var(--horderly-text);
+  --color-border-strong: var(--horderly-accent);
+}
+
+/* Botão padrão neste tema */
+.theme--horderly .btn--primary {
+  background: var(--horderly-accent);
+  color: #fff;
+  border-color: var(--horderly-accent);
+}
+
+.theme--horderly .btn--primary:hover {
+  background: var(--horderly-accent-dark);
+  border-color: var(--horderly-accent-dark);
+}
+
+/* Inputs deste tema sempre usam border-bottom */
+.theme--horderly input,
+.theme--horderly textarea {
+  border: none;
+  border-bottom: 1px solid var(--horderly-accent);
+  background: transparent;
+  padding-left: 0;
+  border-radius: 0;
+}
+
+/* ============================================================
+   TEMA BASE: Simply Spaced
+   Neutro quente — areia#8c7d72, creme #faf7f4
+   Tipografia claramente geométrica, muito espaçamento
+============================================================ */
+.theme--simply-spaced {
+  --color-accent:      var(--ss-accent);
+  --color-accent-warm: var(--ss-accent-light);
+  --color-bg:          var(--ss-bg);
+  --color-bg-alt:      var(--ss-bg-alt);
+  --color-text:        var(--ss-text);
+}
+
+.theme--simply-spaced .btn--primary {
+  background: var(--ss-text);
+  color: #fff;
+  border-color: var(--ss-text);
+}
+
+.theme--simply-spaced .btn--accent {
+  background: var(--ss-accent);
+  color: #fff;
+  border-color: var(--ss-accent);
+}
+
+/* ============================================================
+   TEMAS: The Home Edit
+   Sistema de color-theme--<page> aplicado ao <body>.
+   Cada tema define:
+     1. Cor do utility-bar de anúncio
+     2. Cor do footer
+     3. Accent de botão/link
+============================================================ */
+
+/* ── Home / Page genérica ─────────────────────────────────── */
+.theme--the-index {
+  --color-text: var(--the-black);
+}
+.theme--the-index .utility-bar {
+  background: var(--the-lightblue);
+  color: var(--the-darkblue);
+}
+.theme--the-index .site-footer {
+  background: var(--the-lightblue);
+  color: var(--the-darkgreen);
+}
+
+/* ── Blog / Artigos ───────────────────────────────────────── */
+.theme--the-blog {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-blog .utility-bar {
+  background: var(--the-darkyellow);
+  color: var(--the-darkblue);
+}
+.theme--the-blog .site-footer {
+  background: var(--the-darkyellow);
+  color: var(--the-darkpurple);
+}
+
+/* ── Watch / Vídeos ───────────────────────────────────────── */
+.theme--the-watch {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-watch .utility-bar {
+  background: var(--the-lightgreen);
+  color: var(--the-darkblue);
+}
+.theme--the-watch .site-footer {
+  background: var(--the-lightgreen);
+  color: var(--the-darkblue);
+}
+
+/* ── Our Picks ────────────────────────────────────────────── */
+.theme--the-our-picks .utility-bar {
+  background: var(--the-lightpurple);
+  color: var(--the-darkred);
+}
+.theme--the-our-picks .site-footer {
+  background: var(--the-lightpurple);
+  color: var(--the-darkpurple);
+}
+
+/* ── FAQ ──────────────────────────────────────────────────── */
+.theme--the-faqs {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-faqs .utility-bar {
+  background: var(--the-lightpink);
+  color: var(--the-darkpurple);
+}
+.theme--the-faqs .site-footer {
+  background: var(--the-darkblue);
+  color: var(--the-lightpurple);
+}
+
+/* ── Produto ──────────────────────────────────────────────── */
+.theme--the-product {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-product .utility-bar {
+  background: var(--the-darkblue);
+  color: var(--the-cream);
+}
+.theme--the-product .site-footer {
+  background: var(--the-darkblue);
+  color: var(--the-lightblue);
+}
+
+/* ── About ────────────────────────────────────────────────── */
+.theme--the-about {
+  --color-text: var(--the-black);
+}
+.theme--the-about .utility-bar {
+  background: var(--the-darkblue);
+  color: var(--the-cream);
+}
+.theme--the-about .site-footer {
+  background: var(--the-midpink);
+  color: var(--the-darkred);
+}
+
+/* ── Newsletter ───────────────────────────────────────────── */
+.theme--the-newsletter {
+  --color-text: var(--the-black);
+}
+.theme--the-newsletter .utility-bar {
+  background: var(--the-darkred);
+  color: var(--the-cream);
+}
+.theme--the-newsletter .btn--primary {
+  background: var(--the-darkred);
+  color: var(--the-cream);
+}
+.theme--the-newsletter .site-footer {
+  background: var(--the-darkred);
+  color: var(--the-lightpink);
+}
+
+/* ── Kids & Teens ─────────────────────────────────────────── */
+.theme--the-kids {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-kids .utility-bar {
+  background: var(--the-darkpurple);
+  color: var(--the-cream);
+}
+.theme--the-kids .site-footer {
+  background: var(--the-darkblue);
+  color: var(--the-lightpurple);
+}
+
+/* ── Press ────────────────────────────────────────────────── */
+.theme--the-press {
+  --color-text: var(--the-black);
+}
+.theme--the-press .utility-bar {
+  background: var(--the-darkyellow);
+  color: var(--the-darkpurple);
+}
+.theme--the-press .site-footer {
+  background: var(--the-darkblue);
+  color: var(--the-darkyellow);
+}
+
+/* ── Organizing Services ──────────────────────────────────── */
+.theme--the-services {
+  --color-text: var(--the-black);
+}
+.theme--the-services .utility-bar {
+  background: var(--the-darkblue);
+  color: var(--the-cream);
+}
+.theme--the-services .site-footer {
+  background: var(--the-darkgreen);
+  color: var(--the-lightblue);
+}
+
+/* ── Careers ──────────────────────────────────────────────── */
+.theme--the-careers {
+  --color-text: var(--the-darkblue);
+}
+.theme--the-careers .utility-bar {
+  background: var(--the-lightpurple);
+  color: var(--the-darkblue);
+}
+.theme--the-careers .site-footer {
+  background: var(--the-lightpurple);
+  color: var(--the-darkpurple);
+}
+
+/* ============================================================
+   THE HOME EDIT: MEGA-MENU — Cor por categoria
+   Usa a mesma lógica de cores do menu superior.
+   Aplicar ao .mega-menu__<categoria>
+============================================================ */
+.mega-menu__shop     { background: var(--the-lightblue);   color: var(--the-darkblue); }
+.mega-menu__blog     { background: var(--the-lightyellow);  color: var(--the-darkblue); }
+.mega-menu__watch    { background: var(--the-lightgreen);   color: var(--the-darkblue); }
+.mega-menu__picks    { background: var(--the-lightpurple);  color: var(--the-darkpurple); }
+.mega-menu__kids     { background: var(--the-lightpink);    color: var(--the-darkpurple); }
+
+/* ============================================================
+   MODO ESCURO (opt-in via .dark ou [data-theme="dark"])
+   Mínimo necessário para suporte futuro.
+============================================================ */
+.dark,
+[data-theme="dark"] {
+  --color-bg:        #1a1918;
+  --color-bg-alt:    #252220;
+  --color-bg-section:#2e2b28;
+  --color-text:      #f0ede9;
+  --color-text-muted:#a09890;
+  --color-border:    #3a3632;
+  --color-border-strong: #b8adbe;
+}

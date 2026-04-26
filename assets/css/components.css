@@ -1,0 +1,1302 @@
+/*
+ * ================================================================
+ *  COMPONENTS.CSS — UI Elements e Componentes
+ *  Depende de: tokens.css, base.css
+ *
+ *  Inclui:
+ *  - Botões (.btn)
+ *  - Formulários (.input--, .form-label, .select-wrap)
+ *  - Cards (.card)
+ *  - Navegação (.ds-header-demo, .utility-bar)
+ *  - Badges / Tags (.tag)
+ *  - Animações de entrada / micro-interações
+ *  - DS Showcase panels (color, spacing, theme)
+ * ================================================================
+ */
+
+/* ============================================================
+   BOTÕES
+   Base: Horderly — padding 1.0625rem 1.5625rem, sem radius
+   The Home Edit: min-height 4.8rem, min-width 18.4rem
+============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-family: var(--font-tenor);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  padding: 1.0625rem 1.5625rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-none);
+  cursor: pointer;
+  white-space: nowrap;
+  text-decoration: none;
+  transition:
+    background var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-fast);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Variantes de Cor ─────────────────────────────────────── */
+
+/* Primary — dark fill */
+.btn--primary {
+  background: var(--color-text);
+  color: var(--color-bg);
+  border-color: var(--color-text);
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-bg) !important;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Accent — lavanda Horderly */
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+  background: var(--horderly-accent-dark);
+  border-color: var(--horderly-accent-dark);
+}
+
+/* Accent Warm — areia Simply Spaced */
+.btn--accent-warm {
+  background: var(--color-accent-warm);
+  color: var(--color-text);
+  border-color: var(--color-accent-warm);
+}
+
+.btn--accent-warm:hover {
+  background: var(--ss-accent);
+  color: #fff;
+  border-color: var(--ss-accent);
+}
+
+/* Outline */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  transform: translateY(-2px);
+}
+
+/* Ghost / link */
+.btn--ghost {
+  background: transparent;
+  color: var(--color-text);
+  border-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn--ghost:hover {
+  color: var(--color-text-muted);
+}
+
+/* ── The Home Edit — botões cromáticos ───────────────────── */
+.btn--the-blue {
+  background: var(--the-darkblue);
+  color: var(--the-cream);
+}
+
+.btn--the-blue:hover {
+  background: var(--the-midblue);
+}
+
+.btn--the-green {
+  background: var(--the-darkgreen);
+  color: var(--the-cream);
+}
+
+.btn--the-green:hover {
+  background: var(--the-midgreen);
+}
+
+.btn--the-red {
+  background: var(--the-darkred);
+  color: var(--the-cream);
+}
+
+.btn--the-red:hover {
+  background: var(--the-midred);
+}
+
+/* ── Modificadores de Tamanho ─────────────────────────────── */
+.nav-editorial__cta {
+  padding: 0.7rem 1.8rem !important;
+  font-size: 10px !important;
+  margin-left: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}
+
+.nav-editorial__cta:hover {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de deslocamento sutil nos botões */
+.btn {
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+.btn--sm {
+  padding: 0.625rem 1rem;
+  font-size: 11px;
+}
+
+.btn--lg {
+  padding: 1.25rem 2.5rem;
+  font-size: var(--text-sm);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+/* ── Grupo de botões (showcase) ──────────────────────────── */
+.ds-btn-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* ============================================================
+   FORMULÁRIOS
+   Dois estilos:
+   • .input--minimal — border-bottom somente (Horderly)
+   • .input--box     — caixa completa (The Home Edit)
+============================================================ */
+
+/* ── Label ────────────────────────────────────────────────── */
+.form-label {
+  display: block;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-text);
+  margin-bottom: var(--space-2);
+}
+
+/* ── Grupo de campo ──────────────────────────────────────── */
+.ds-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+/* ── Estilo Horderly: border-bottom ──────────────────────── */
+.input--minimal {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--horderly-accent);
+  padding: var(--space-3) 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+
+.input--minimal:focus {
+  border-bottom-color: var(--color-text);
+}
+
+.input--minimal::placeholder {
+  color: var(--the-outline);
+}
+
+textarea.input--minimal {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ── Estilo The Home Edit: caixa completa ────────────────── */
+.input--box {
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--the-outline);
+  border-radius: 0;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  outline: none;
+  min-height: 48px;
+  transition: border-color var(--transition-base);
+}
+
+.input--box:focus {
+  border-color: var(--color-text);
+}
+
+.input--box::placeholder {
+  color: var(--the-outline);
+}
+
+textarea.input--box {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ── Select ───────────────────────────────────────────────── */
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: var(--color-bg);
+  border: 1px solid var(--the-outline);
+  padding: var(--space-3) var(--space-10) var(--space-3) var(--space-4);
+  font: inherit;
+  color: var(--color-text);
+  min-height: 48px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.select-wrap::after {
+  content: '↓';
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   NAVEGAÇÃO — Header Demo e Utility Bar
+============================================================ */
+
+/* ── Utility Bar de Anúncio — The Home Edit ──────────────── */
+.utility-bar {
+  background: var(--the-lightblue);
+  padding: var(--space-2) var(--space-6);
+  text-align: center;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+  color: var(--the-darkblue);
+}
+
+/* ── Header Demo ──────────────────────────────────────────── */
+.ds-header-demo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.ds-header-demo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: auto;
+}
+
+.demo-logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 300;
+  letter-spacing: var(--tracking-wide);
+}
+
+.demo-nav {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.demo-nav a {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text);
+  padding: var(--space-2) var(--space-3);
+  transition: background var(--transition-fast);
+}
+
+.demo-nav a:hover {
+  background: var(--color-bg-alt);
+}
+
+.demo-nav-actions {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.icon-btn:hover {
+  opacity: 0.6;
+}
+
+/* ============================================================
+   CARDS
+   • .card           — minimal sem borda (Horderly/Simply Spaced)
+   • .card--the      — com borda (The Home Edit produto)
+============================================================ */
+.card {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Media do card com aspect ratio portrait */
+.card__media {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.card__media::before {
+  content: '';
+  display: block;
+  padding-top: 120%;
+  /* portrait 5:6 */
+}
+
+/* Efeito de zoom na imagem ao hover */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img,
+.img-zoom .img-placeholder {
+  transition: transform var(--transition-slow);
+}
+
+.img-service {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.imgSobre {
+  object-fit: cover;
+}
+
+.imgMetodologia {
+  width: 100%;
+  height: 36rem;
+  object-fit: cover;
+}
+
+.imgAntesDepois {
+  width: 100%;
+  height: 28rem;
+  object-fit: cover;
+}
+
+.imgComofunciona {
+  width: 100%;
+  height: 18rem;
+  object-fit: cover;
+}
+
+.imgHero {
+  width: 10rem;
+  height: 14rem;
+  object-fit: cover;
+  padding-bottom: var(--space-4);
+}
+
+.imgHero2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-left: var(--space-4);
+  padding-bottom: var(--space-4);
+}
+
+.imgEditorial {
+  width: 95%;
+  height: 35rem;
+  object-fit: cover;
+  padding-bottom: var(--space-4);
+}
+
+
+.img-zoom:hover img,
+.img-zoom:hover .img-placeholder {
+  transform: scale(1.04);
+}
+
+.card__media-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+}
+
+.card__body {
+  padding: var(--space-6) 0;
+}
+
+.card__eyebrow {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: 300;
+  line-height: var(--leading-snug);
+  margin-bottom: var(--space-3);
+}
+
+.card__desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.card__link {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.card__link:hover {
+  opacity: 0.6;
+}
+
+/* Card com borda — The Home Edit estilo produto */
+.card--the {
+  border: 1px solid var(--the-outline);
+}
+
+.card--the .card__body {
+  padding: var(--space-5);
+}
+
+.card--the .card__title {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* ============================================================
+   BADGES / TAGS
+   As cores de tag são baseadas no sistema de categorias
+   do The Home Edit (light/dark pares cromáticos).
+============================================================ */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  font-weight: 500;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.tag--default {
+  background: var(--color-bg-alt);
+  color: var(--color-text-muted);
+}
+
+.tag--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.tag--green {
+  background: var(--the-lightgreen);
+  color: var(--the-darkgreen);
+}
+
+.tag--blue {
+  background: var(--the-lightblue);
+  color: var(--the-darkblue);
+}
+
+.tag--yellow {
+  background: var(--the-lightyellow);
+  color: var(--the-darkblue);
+}
+
+.tag--pink {
+  background: var(--the-lightpink);
+  color: var(--the-darkred);
+}
+
+.tag--purple {
+  background: var(--the-lightpurple);
+  color: var(--the-darkpurple);
+}
+
+.tag--orange {
+  background: var(--the-lightorange);
+  color: var(--the-darkred);
+}
+
+.ds-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+/* ============================================================
+   ANIMAÇÕES DE ENTRADA
+   Baseadas nas transições de scroll do Horderly
+   (animation-fill-mode: both) e escala do Simply Spaced.
+
+   Uso JS: adicione .is-visible via IntersectionObserver
+   (ver ds-core.js → initScrollAnimations)
+============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Elementos ficam invisíveis até .is-visible ser adicionado */
+.anim--fade-in-up,
+.anim--fade-in,
+.anim--scale-up {
+  opacity: 0;
+}
+
+.anim--fade-in-up.is-visible {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.anim--fade-in.is-visible {
+  animation: fadeIn 0.4s ease both;
+}
+
+.anim--scale-up.is-visible {
+  animation: scaleUp 0.4s ease both;
+}
+
+/* Suporte a delay via atributo data-delay (aplicado por JS) */
+.anim--fade-in-up.is-visible[style*="--anim-delay"] {
+  animation-delay: var(--anim-delay, 0s);
+}
+
+/* ── Demo box de animações (apenas DS viewer) ─────────────── */
+.anim-demo-box {
+  width: 100%;
+  padding: var(--space-8);
+  background: var(--color-bg-alt);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.anim-demo-item {
+  width: 80px;
+  height: 80px;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-xs);
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.anim-demo-item:hover {
+  animation: scaleUp 0.3s ease;
+}
+
+/* ============================================================
+   DS SHOWCASE — Color Panels
+   Usados apenas na documentação do DS
+============================================================ */
+.ds-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+}
+
+.ds-color-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.ds-color-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ds-color-swatch {
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2);
+}
+
+.ds-color-info {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+}
+
+.ds-color-name {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.ds-color-hex {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+}
+
+/* Grupo de cores por site */
+.ds-site-group {
+  margin-bottom: var(--space-12);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.ds-site-group-label {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ds-site-group-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ── Theme cards (The Home Edit) ─────────────────────────── */
+.ds-theme-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--space-4);
+}
+
+.ds-theme-card {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.ds-theme-strip {
+  height: 48px;
+}
+
+.ds-theme-body {
+  padding: var(--space-3) var(--space-4);
+  background: #fff;
+}
+
+.ds-theme-name {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.ds-theme-desc {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+/* ============================================================
+   PERSONAL ORGANIZER — Como Funciona (Editorial Collage)
+============================================================ */
+.po-how-it-works {
+  background: var(--color-bg);
+}
+
+.po-how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.po-how-card {
+  position: relative;
+  background: var(--color-bg-alt);
+}
+
+
+.po-how-card:nth-child(2) {
+  margin-top: calc(var(--space-8) * -1);
+}
+
+.po-how-label {
+  position: relative;
+  margin-top: calc(var(--space-10) * -1);
+  margin-left: var(--space-6);
+  margin-right: var(--space-6);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.po-how-label .type--label {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-muted);
+}
+
+.po-how-label .type--h3 {
+  font-weight: 300;
+  line-height: var(--leading-snug);
+}
+
+/* ============================================================
+   PERSONAL ORGANIZER — Depoimentos Dinamicos
+============================================================ */
+.po-testimonials {
+  background: linear-gradient(to right, var(--color-bg-alt) 0 22%, var(--color-bg) 22% 100%);
+}
+
+.po-testimonial-stage {
+  display: grid;
+  grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
+  gap: clamp(var(--space-8), 5vw, var(--space-20));
+  align-items: center;
+}
+
+.po-testimonial-media {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-section);
+}
+
+.po-testimonial-media img {
+  width: 100%;
+  height: clamp(360px, 44vw, 560px);
+  object-fit: cover;
+}
+
+.po-testimonial-content {
+  max-width: 680px;
+}
+
+.po-testimonial-quote {
+  font-family: var(--font-tenor);
+  font-size: clamp(2rem, 4.4vw, 4rem);
+  line-height: 1.08;
+  font-weight: 300;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.015em;
+}
+
+.po-testimonial-context {
+  max-width: 58ch;
+  margin-bottom: var(--space-6);
+}
+
+.po-testimonial-signature {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  line-height: 1;
+  color: var(--color-text);
+  margin-bottom: var(--space-10);
+  font-family: "Ms Madi", cursive;
+}
+
+.po-testimonial-timer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.po-testimonial-progress-track {
+  width: 100%;
+  height: 3px;
+  background: var(--color-border);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+
+.po-testimonial-progress-bar {
+  display: block;
+  width: 0%;
+  height: 100%;
+  background: var(--color-text);
+  transition: width 120ms linear;
+}
+
+.po-testimonial-timer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.po-testimonial-stage.is-paused .po-testimonial-progress-bar {
+  background: var(--color-text-muted);
+}
+
+.po-testimonial-content.is-changing {
+  animation: fadeIn 0.35s ease;
+}
+
+.po-testimonial-media.is-changing img {
+  animation: fadeIn 0.35s ease;
+}
+
+/* ============================================================
+   PERSONAL ORGANIZER — Para Quem Se Identifica (Grid Editorial)
+============================================================ */
+.po-ideal-for {
+  background: var(--color-bg-alt);
+}
+
+.po-ideal-kicker {
+  text-align: center;
+  margin-bottom: var(--space-3);
+}
+
+.po-ideal-title {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+.po-ideal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(var(--space-10), 6vw, var(--space-24));
+  row-gap: clamp(var(--space-10), 4vw, var(--space-16));
+  align-items: start;
+}
+
+.po-ideal-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(var(--space-10), 4vw, var(--space-16));
+}
+
+.po-ideal-column--left {
+  padding-top: var(--space-8);
+}
+
+.po-ideal-column--right {
+  padding-top: calc(var(--space-6) * -1);
+}
+
+.po-ideal-item {
+  position: relative;
+}
+
+.po-ideal-media {
+  background: var(--color-bg);
+}
+
+.po-ideal-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.po-ideal-media--sm {
+  aspect-ratio: 4 / 5;
+}
+
+.po-ideal-media--md {
+  aspect-ratio: 16 / 10;
+}
+
+.po-ideal-media--md2 {
+  aspect-ratio: 16 / 11;
+}
+
+.po-ideal-media--lg {
+  aspect-ratio: 4 / 5.6;
+}
+
+.po-ideal-note {
+  margin-top: var(--space-4);
+  max-width: 40ch;
+  padding-inline: var(--space-1);
+}
+
+.po-ideal-note .type--body {
+  line-height: var(--leading-relaxed);
+}
+
+.po-ideal-note--right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.po-ideal-script {
+  font-family: "Ms Madi", cursive;
+  font-size: clamp(2.1rem, 3vw, 3rem);
+  line-height: 1;
+  color: var(--color-accent);
+  margin-bottom: calc(var(--space-5) * -1);
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.po-ideal-script--soft {
+  margin-left: var(--space-6);
+}
+
+.nav-editorial {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  padding: 1.8rem 0;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease, visibility 0.8s ease, background 0.6s ease, padding 0.6s ease;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-editorial.is-revealed {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-editorial.nav-hidden {
+  transform: translateY(-100%);
+}
+
+.nav-editorial.is-scrolled {
+  padding: 1.2rem 0;
+  /* Removido background e backdrop-filter para manter transparente */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-editorial__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-editorial__logo {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav-editorial__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.nav-editorial__link {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.nav-editorial__link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-text);
+  transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.nav-editorial__link:hover {
+  opacity: 0.7;
+}
+
+.nav-editorial__link:hover::after {
+  width: 15px;
+  opacity: 1;
+}
+
+.nav-editorial__divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.nav-editorial__cta {
+  margin-left: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .nav-editorial__logo {
+    font-size: 1.2rem;
+    max-width: 120px;
+    line-height: 1.2;
+  }
+}
+
+/* ── Menu Trigger (Editorial Design) ───────────────────── */
+.menu-trigger {
+  display: none;
+  /* Default hidden */
+  align-items: center;
+  gap: 1.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: var(--color-text);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  margin-left: auto;
+  /* Push to the right */
+  z-index: 2100;
+}
+
+.menu-trigger__lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-trigger__lines span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--color-text);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s ease;
+}
+
+/* Nav links default state */
+.nav-editorial__nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 1;
+  margin-left: auto;
+  /* Also push to the right */
+}
+
+/* Scrolled State: Collapse Links, Show Menu */
+.nav-editorial.is-scrolled .nav-editorial__nav {
+  display: none !important;
+  /* Use display: none to remove from flow */
+}
+
+@media (max-width: 768px) {
+  .nav-editorial__nav {
+    display: none !important;
+  }
+
+  .menu-trigger {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+}
+
+.nav-editorial.is-scrolled .menu-trigger {
+  display: flex;
+  opacity: 1;
+}
+
+/* Open State (Desktop & Mobile) */
+.nav-editorial.is-menu-open .nav-editorial__nav {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+  pointer-events: auto !important;
+  display: flex !important;
+}
+
+/* On Desktop: Show links next to the menu or replacing it */
+@media (min-width: 769px) {
+  .nav-editorial.is-menu-open .nav-editorial__nav {
+    position: absolute;
+    right: 6.5rem;
+    /* Space for the "X" trigger */
+    flex-direction: row;
+    background: transparent;
+  }
+}
+
+/* Animate Trigger to X */
+.nav-editorial.is-menu-open .menu-trigger__lines span:nth-child(1) {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.nav-editorial.is-menu-open .menu-trigger__lines span:nth-child(2) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* Mobile Overlay Style */
+@media (max-width: 768px) {
+  .nav-editorial.is-menu-open .nav-editorial__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-8);
+    z-index: 1500;
+  }
+
+  .nav-editorial.is-menu-open .nav-editorial__link {
+    font-size: var(--text-2xl);
+    font-family: var(--font-serif);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+
+  .nav-editorial.is-menu-open .nav-editorial__divider {
+    display: none;
+  }
+
+  .nav-editorial.is-menu-open .nav-editorial__logo,
+  .nav-editorial.is-menu-open .menu-trigger {
+    z-index: 1600;
+  }
+}
+
+/* Prevent scroll when mobile menu is open */
+body.menu-open-locked {
+  overflow: hidden;
+}

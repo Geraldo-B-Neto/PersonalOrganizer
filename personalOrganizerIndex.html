@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bianca Carvalho — Personal Organizer</title>
+    <meta name="description"
+        content="Restaurando ordem, clareza e tempo através de soluções personalizadas de organização.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=Tenor+Sans&family=Ms+Madi&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/typography.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/themes.css">
+    <link rel="stylesheet" href="assets/css/responsivo.css">
+</head>
+
+<body class="theme--simply-spaced">
+
+    <!-- ══════════════════════════════════════
+        PRE-LOADER — Manifesto (Luxo Silencioso)
+   ══════════════════════════════════════ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__inner">
+            <p class="preloader__text font-serif">Respire.</p>
+            <button class="preloader__btn btn btn--outline preloader__btn--hidden" id="startExperience">ENTRAR NA
+                EXPERIÊNCIA</button>
+        </div>
+    </div>
+
+    <!-- Intro Video Overlay (Fullscreen + Som) -->
+    <div class="intro-video-overlay" id="introOverlay">
+        <video id="introVideo" class="intro-video-element">
+            <source src="./assets/img/stones-animation.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+
+    <!-- ══════════════════════════════════════
+        HEADER — EDITORIAL (FINAL)
+    ══════════════════════════════════════ -->
+    <header class="nav-editorial" id="mainHeader">
+        <div class="nav-editorial__inner">
+            <a href="#" class="nav-editorial__logo">Bianca Carvalho</a>
+            <button class="menu-trigger" aria-label="Menu" id="navMenuToggle">
+                <span>menu</span>
+                <div class="menu-trigger__lines">
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+
+            <nav class="nav-editorial__nav">
+                <a href="#quem-eu-sou" class="nav-editorial__link">Quem Eu Sou</a>
+                <span class="nav-editorial__divider"></span>
+                <a href="#servicos" class="nav-editorial__link">Serviços</a>
+                <span class="nav-editorial__divider"></span>
+                <a href="#antes-depois" class="nav-editorial__link">Transformações</a>
+                <span class="nav-editorial__divider"></span>
+                <a href="#contato" class="nav-editorial__link">Contato</a>
+
+                <a href="#contato" class="btn btn--primary btn--sm nav-editorial__cta">Agendar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ══════════════════════════════════════
+         HERO V7 — Avant-Garde Impact
+    ══════════════════════════════════════ -->
+        <section class="hero-v7">
+            <div class="hero-v7__bg-grain"></div>
+
+            <div class="container hero-v7__container">
+                <div class="hero-v7__text-wrap">
+                    <h1 class="hero-v7__title font-serif" id="heroTitle">
+                        <span class="title-line line-1">
+                            <span>B</span><span>I</span><span>A</span><span>N</span><span>C</span><span>A</span>
+                        </span>
+                        <span class="title-line line-2">
+                            <span>C</span><span>A</span><span>R</span><span>V</span><span>A</span><span>L</span><span>H</span><span>O</span>
+                        </span>
+                    </h1>
+                    <p class="hero-v7__subtitle type--label tracking-widest uppercase">
+                        Personal Organizer
+                    </p>
+                </div>
+
+                <div class="hero-v7__object-wrap" id="heroImageContainer">
+                    <img src="./assets/img/pedrasOrganizadas.png" alt="Pedras de Equilíbrio Zen"
+                        class="hero-v7__object">
+                </div>
+
+                <div class="hero-v7__footer">
+                    <div class="hero-v7__footer-content">
+                        <p class="type--body-lg">Curadoria de espaços e design de rotina.</p>
+                        <a href="#contato" class="btn btn--primary">Solicitar Orçamento</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         CONCEITO — Frase Editorial
+    ══════════════════════════════════════ -->
+        <section class="alternating-section section" id="quem-eu-sou">
+
+            <div class="alternating-section__content anim--fade-in-up">
+                <p class="type--label text-muted tracking-widest uppercase po-mb-6">
+                    Antes de tudo
+                </p>
+                <h2 class="type--h1 font-serif po-mb-8 po-leading-tight">
+                    Você é tão organizada quanto já sente que pode ser. A ação transforma seu dia em leveza, e permitir
+                    ajuda traz clareza onde antes havia caos…
+                </h2>
+                <p class="type--body text-muted po-mb-6">
+                    Então se você ainda está presa à desordem — ou com coisas demais na sua lista…
+                </p>
+                <p class="type--h2 font-serif po-italic po-mb-10">
+                    Você está no lugar certo
+                </p>
+                <a href="#contato" class="btn btn--outline">Agendar uma Conversa &nbsp;→</a>
+            </div>
+
+            <div class="alternating-section__media img-zoom anim--fade-in">
+
+                <img class="imgEditorial" src="./assets/img/lugarOrganizado4.png" alt="">
+            </div>
+
+        </section>
+
+        <!-- ══════════════════════════════════════
+         SERVIÇOS — Grid Editorial
+    ══════════════════════════════════════ -->
+        <section class="section--lg" id="servicos">
+            <div class="container">
+
+                <div class="ds-site-group-label tracking-widest text-muted uppercase anim--fade-in-up">
+                    O que eu faço
+                </div>
+
+                <div class="po-maxw-640 po-mb-16">
+                    <h2 class="type--h1 font-serif anim--fade-in-up po-mb-4">
+                        Serviços Personalizados de Organização
+                    </h2>
+                    <p class="type--body-lg text-muted anim--fade-in-up">
+                        Cada espaço tem sua lógica. Cada cliente, seu ritmo. O trabalho começa sempre pela escuta.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+
+                    <div class="card anim--fade-in-up">
+                        <div class="img-zoom">
+                            <img class="img-service object-cover" src="./assets/img/closet2.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <p class="card__eyebrow">Serviço 01</p>
+                            <h3 class="card__title">Guarda-Roupas & Closet</h3>
+                            <p class="card__desc">
+                                Curadoria de peças e um sistema duradouro para facilitar sua rotina. As peças passam a
+                                ter lógica, visibilidade e propósito.
+                            </p>
+                            <a href="#" class="card__link link-animated type--label tracking-widest">Ver Detalhes →</a>
+                        </div>
+                    </div>
+
+                    <div class="card anim--fade-in-up">
+                        <div class="img-zoom">
+
+                            <img class="img-service object-cover" src="./assets/img/cozinha2.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <p class="card__eyebrow">Serviço 02</p>
+                            <h3 class="card__title">Armários de Cozinha e Banheiro</h3>
+                            <p class="card__desc">
+                                Organização dos seus itens pessoais, criando um sistema claro e para seus
+                                dias. Tudo passa a ter lugar, tornando sua rotina mais leve, rápida e
+                                eficiente
+                            </p>
+                            <a href="#" class="card__link link-animated type--label tracking-widest">Ver Detalhes →</a>
+                        </div>
+                    </div>
+
+                    <div class="card anim--fade-in-up">
+                        <div class="img-zoom">
+                            <img class="img-service object-cover" src="./assets/img/malas2.png" alt="">
+                        </div>
+                        <div class="card__body">
+                            <p class="card__eyebrow">Serviço 03</p>
+                            <h3 class="card__title">Malas de Viagem</h3>
+                            <p class="card__desc">
+                                Cada item é pensado estrategicamente, garantindo praticidade, otimização de espaço e
+                                facilidade ao longo de toda a viagem do momento de arrumar até o de usar.
+                            </p>
+                            <a href="#" class="card__link link-animated type--label tracking-widest">Ver Detalhes →</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         COMO FUNCIONA — Editorial Collage
+    ══════════════════════════════════════ -->
+        <section class="section po-how-it-works" id="como-funciona">
+            <div class="container">
+                <div class="po-maxw-640 po-mb-12">
+                    <div class="ds-site-group-label tracking-widest text-muted uppercase anim--fade-in-up">
+                        Como funciona
+                    </div>
+                    <h2 class="type--h1 font-serif anim--fade-in-up po-mb-4">
+                        Um processo leve, humano e feito para a sua rotina
+                    </h2>
+                    <p class="type--body text-muted anim--fade-in-up">
+                        Cada projeto acontece com escuta, estratégia e sensibilidade. A organizacao final precisa fazer
+                        sentido para voce, nao para um padrao distante da sua vida real.
+                    </p>
+                </div>
+
+                <div class="po-how-grid">
+                    <article class="po-how-card img-zoom anim--scale-up">
+                        <img class="imgComofunciona" src="./assets/img/biancaNoEscritorio.png"
+                            alt="Bianca em atendimento de organizacao">
+                        <div class="po-how-label">
+                            <p class="type--label tracking-widest uppercase">Conversa inicial</p>
+                            <p class="type--h3 font-serif">Entendo seu momento e sua rotina</p>
+                        </div>
+                    </article>
+
+                    <article class="po-how-card img-zoom anim--scale-up">
+                        <img class="imgComofunciona" src="./assets/img/esbocoOrganizacao.png"
+                            alt="Closet organizado com categorias">
+                        <div class="po-how-label">
+                            <p class="type--label tracking-widest uppercase">Estrategia personalizada</p>
+                            <p class="type--h3 font-serif">Criamos uma logica clara para o seu espaco</p>
+                        </div>
+                    </article>
+
+                    <article class="po-how-card img-zoom anim--scale-up">
+                        <img class="imgComofunciona" src="./assets/img/biancaArrumandoToalha.png"
+                            alt="Armarios de cozinha organizados">
+                        <div class="po-how-label">
+                            <p class="type--label tracking-widest uppercase">Implementacao guiada</p>
+                            <p class="type--h3 font-serif">Tudo fica funcional e facil de manter</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         PARA QUEM SE IDENTIFICA — Editorial Grid
+    ══════════════════════════════════════ -->
+        <section class="section po-ideal-for" id="para-quem-se-identifica">
+            <div class="container">
+                <p class="type--label tracking-widest uppercase text-muted po-ideal-kicker anim--fade-in-up">
+                    Para quem se identifica
+                </p>
+                <h2 class="type--h1 font-serif po-ideal-title anim--fade-in-up">
+                    Voce provavelmente vai se reconhecer aqui
+                </h2>
+
+                <div class="po-ideal-grid">
+                    <div class="po-ideal-column po-ideal-column--left">
+                        <article class="po-ideal-item anim--scale-up">
+                            <p class="po-ideal-script">rotina cheia, casa sem respiro</p>
+                            <div class="po-ideal-media img-zoom po-ideal-media--sm">
+                                <img src="./assets/img/rotinaCorrida.png"
+                                    alt="Quarto organizado para uma rotina mais leve">
+                            </div>
+                            <div class="po-ideal-note">
+                                <p class="type--body">Quando sua casa ja nao acompanha o ritmo da sua rotina.</p>
+                            </div>
+                        </article>
+
+                        <article class="po-ideal-item anim--scale-up">
+                            <div class="po-ideal-media img-zoom po-ideal-media--md">
+                                <img src="./assets/img/caixasOrganizadas.png"
+                                    alt="Itens organizados para mudanca de fase">
+                            </div>
+                            <div class="po-ideal-note po-ideal-note---+right">
+                                <p class="type--body">Mudancas de fase: casa nova, filhos, nova rotina ou trabalho.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="po-ideal-column po-ideal-column--right">
+                        <article class="po-ideal-item anim--scale-up">
+                            <div class="po-ideal-note">
+                                <p class="type--body">Armarios cheios, mas voce ainda perde tempo procurando tudo.</p>
+                            </div>
+                            <div class="po-ideal-media img-zoom po-ideal-media--lg">
+                                <img src="./assets/img/armarioBaguncado2.png"
+                                    alt="Closet com categorias e visual limpo">
+                            </div>
+                        </article>
+
+                        <article class="po-ideal-item anim--scale-up">
+                            <p class="po-ideal-script po-ideal-script--soft">leve, pratico, sustentavel</p>
+                            <div class="po-ideal-media img-zoom po-ideal-media--sm">
+                                <img src="./assets/img/toalhasOrganizadas.png"
+                                    alt="Cozinha organizada com sistema facil de manter">
+                            </div>
+                            <div class="po-ideal-note">
+                                <p class="type--body">Voce quer praticidade real, sem perfeccionismo e sem culpa.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         METODOLOGIA
+    ══════════════════════════════════════ -->
+        <section class="alternating-section" id="metodologia">
+
+            <div class="alternating-section__content anim--fade-in-up">
+                <p class="type--label text-muted tracking-widest uppercase po-mb-4">
+                    Minha Metodologia
+                </p>
+                <h2 class="type--h1 font-serif po-mb-4">
+                    A Organização que se Sustenta
+                </h2>
+                <p class="type--h3 text-muted font-serif po-service-subtitle">
+                    Sistemas criados para a sua vida real, não para capas de revista.
+                </p>
+                <p class="type--body text-muted po-mb-10 po-maxw-480">
+                    O segredo de uma casa em ordem não é a perfeição, mas a funcionalidade. Crio lógicas onde cada
+                    objeto tem seu "endereço", facilitando o ato de guardar e acabando com o efeito sanfona da desordem.
+                </p>
+                <div class="flex flex-wrap po-gap-4">
+                    <a href="#contato" class="btn btn--primary">Agendar Conversa &nbsp;→</a>
+                </div>
+                <div class="po-highlight-box">
+                    <p class="type--label tracking-widest text-muted uppercase po-mb-3">
+                        Os 3 Pilares:
+                    </p>
+                    <p class="type--body-lg font-serif">
+                        Descarte Consciente, Categorização Inteligente e Manutenção Simplificada.
+                    </p>
+                </div>
+            </div>
+
+            <div class="alternating-section__media img-zoom anim--scale-up">
+                <img class="imgMetodologia object-cover" src="./assets/img/pedrasOrganizadas2.png"
+                    alt="Metodologia de organização aplicada a um closet">
+            </div>
+
+        </section>
+
+        <!-- ══════════════════════════════════════
+         O IMPACTO (Zigzag)
+    ══════════════════════════════════════ -->
+        <section class="alternating-section" id="impacto">
+
+            <div class="alternating-section__media img-zoom anim--scale-up">
+                <img class="imgMetodologia object-cover" src="./assets/img/pedrasDeCima.png"
+                    alt="Ambiente organizado trazendo paz mental">
+            </div>
+
+            <div class="alternating-section__content anim--fade-in-up">
+                <p class="type--label text-muted tracking-widest uppercase po-mb-4">
+                    O Impacto
+                </p>
+                <h2 class="type--h1 font-serif po-mb-4">
+                    Muito Além da Estética
+                </h2>
+                <p class="type--h3 text-muted font-serif po-service-subtitle">
+                    Recupere o seu tempo e a sua paz mental todos os dias.
+                </p>
+                <p class="type--body text-muted po-mb-10 po-maxw-480">
+                    Um ambiente desorganizado drena sua energia e atrasa sua rotina. Ao otimizar seus espaços, você
+                    elimina a fadiga de decisão e ganha tempo de qualidade para o que realmente importa.
+                </p>
+                <a href="#contato" class="btn btn--outline">Quero essa transformação &nbsp;→</a>
+                <div class="po-highlight-box">
+                    <p class="type--label tracking-widest text-muted uppercase po-mb-3">
+                        O verdadeiro valor:
+                    </p>
+                    <p class="type--body-lg font-serif">
+                        Economia de tempo diário e redução drástica da ansiedade ao procurar itens.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ══════════════════════════════════════
+         ANTES & DEPOIS — Grid
+    ══════════════════════════════════════ -->
+        <section class="section" id="antes-depois">
+            <div class="container">
+
+                <div class="ds-site-group-label tracking-widest text-muted uppercase anim--fade-in-up">
+                    Transformações Reais
+                </div>
+
+                <div class="po-maxw-560 po-mb-12">
+                    <h2 class="type--h1 font-serif anim--fade-in-up po-mb-4">
+                        Antes & Depois
+                    </h2>
+                    <p class="type--body text-muted anim--fade-in-up">
+                        Cada projeto é único. Aqui estão algumas das transformações que mais representam o impacto do
+                        trabalho.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+
+                    <div class="card img-zoom anim--scale-up">
+                        <img class="imgAntesDepois" src="./assets/img/guardaRupasBagunçado.png" alt="">
+                        <div class="card__body">
+                            <p class="card__eyebrow">Antes</p>
+                            <h3 class="card__title">Closet — Quarto Principal</h3>
+                            <p class="card__desc">Desorganização que tornava o dia a dia lento e frustrante.</p>
+                        </div>
+                    </div>
+
+                    <div class="card img-zoom anim--scale-up">
+                        <img class="imgAntesDepois" src="./assets/img/guardaRoupasOrganizado.png" alt="">
+                        <div class="card__body">
+                            <p class="card__eyebrow">Depois</p>
+                            <h3 class="card__title">Closet — Quarto Principal</h3>
+                            <p class="card__desc">Sistema com lógica e visibilidade total para cada peça do
+                                guarda-roupa.</p>
+                        </div>
+                    </div>
+
+                    <div class="card img-zoom anim--scale-up">
+                        <img class="imgAntesDepois" src="./assets/img/dispensaDesorganizada.png" alt="">
+                        <div class="card__body">
+                            <p class="card__eyebrow">Antes</p>
+                            <h3 class="card__title">Despensa — Cozinha Completa</h3>
+                            <p class="card__desc">Itens acumulados sem nenhum critério de organização ou acesso.</p>
+                        </div>
+                    </div>
+
+                    <div class="card img-zoom anim--scale-up">
+                        <img class="imgAntesDepois" src="./assets/img/dispensaOrganizada.png" alt="">
+                        <div class="card__body">
+                            <p class="card__eyebrow">Depois</p>
+                            <h3 class="card__title">Despensa — Cozinha Completa</h3>
+                            <p class="card__desc">Categorias claras, acesso imediato, sistema fácil de manter sozinha.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         DEPOIMENTOS — Editorial Dinamico
+    ══════════════════════════════════════ -->
+        <section class="section po-testimonials" id="depoimentos">
+            <div class="container">
+                <article class="po-testimonial-stage anim--fade-in-up" id="poTestimonialStage">
+                    <div class="po-testimonial-media">
+                        <img id="poTestimonialPhoto" src="./assets/img/perfil3.png"
+                            alt="Cliente sorrindo em ambiente organizado">
+                    </div>
+
+                    <div class="po-testimonial-content">
+                        <p class="type--label tracking-widest uppercase text-muted po-mb-4" id="poTestimonialTag">
+                            Resultados reais
+                        </p>
+                        <blockquote class="po-testimonial-quote font-serif" id="poTestimonialQuote">
+                            "A organizacao da Bianca foi um divisor de aguas na minha rotina. Hoje tenho clareza no
+                            meu dia e muito mais leveza em casa."
+                        </blockquote>
+                        <p class="type--body text-muted po-testimonial-context" id="poTestimonialContext">
+                            Com uma rotina intensa de trabalho e casa, eu precisava de um sistema simples para manter o
+                            que construimos juntas.
+                        </p>
+                        <p class="po-testimonial-signature" id="poTestimonialSignature">
+                            - Camila, medica
+                        </p>
+
+                        <div class="po-testimonial-timer" id="poTestimonialTimer"
+                            aria-label="Tempo para proximo depoimento">
+                            <div class="po-testimonial-progress-track" aria-hidden="true">
+                                <span class="po-testimonial-progress-bar" id="poTestimonialProgress"></span>
+                            </div>
+                            <div class="po-testimonial-timer-meta">
+                                <p class="type--label tracking-widest uppercase text-muted">Proximo depoimento</p>
+                                <p class="type--body" id="poTestimonialCountdown">07s</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+         SOBRE MIM — Grid de Fotos
+    ══════════════════════════════════════ -->
+        <section class="section" id="sobre-mim">
+
+            <!-- Overlay Escuro -->
+            <div class="po-about-overlay"></div>
+
+            <div class="container po-about-content">
+                <!-- Text block -->
+                <div class="po-about-text-wrap anim--fade-in-up">
+                    <h2 class="type--h1 font-serif po-mb-4 po-about-title">Sobre Bianca Carvalho</h2>
+                    <p class="type--body-lg po-about-desc">
+                        Transformando o caos em propósito. Acredito que nosso ambiente dita nosso estado de espírito.
+                        Especializada em organização residencial, crio espaços que funcionam em perfeita sintonia com a
+                        sua rotina real, devolvendo o controle da sua casa para você.
+                    </p>
+                </div>
+
+                <!-- 4 Photo Grid -->
+                <div class="grid-4">
+                    <div class="img-zoom anim--scale-up">
+                        <img class="object-cover imgSobre" src="./assets/img/biancaSegurandoPedras.png"
+                            alt="Bianca Carvalho">
+                    </div>
+                    <div class="img-zoom anim--scale-up">
+                        <img class="object-cover imgSobre" src="./assets/img/pedra1.png" alt="Livro e organização">
+                    </div>
+                    <div class="img-zoom anim--scale-up">
+                        <img class="object-cover imgSobre" src="./assets/img/pedra2.png" alt="Gavetas e Caixas">
+                    </div>
+                    <div class="img-zoom anim--scale-up">
+                        <img class="object-cover imgSobre" src="./assets/img/pedra3.png" alt="Arranjo floral">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer-group">
+            <!-- ══════════════════════════════════════
+             CTA — Elegante e Centrado
+        ══════════════════════════════════════ -->
+            <section class="cta-centered" id="contato">
+                <div class="container">
+                    <p class="cta-centered__eyebrow anim--fade-in-up">Pronta para começar?</p>
+                    <h2 class="cta-centered__title font-serif anim--fade-in-up">
+                        Vamos criar o espaço que você sempre quis ter
+                    </h2>
+                    <p class="cta-centered__desc text-muted anim--fade-in-up">
+                        Uma conversa inicial sem compromisso. Entendo seu espaço, sua rotina e seus objetivos antes de
+                        qualquer proposta.
+                    </p>
+                    <div class="flex flex-center flex-wrap po-gap-4">
+                        <a href="mailto:contato@biancacarvalho.com.br"
+                            class="btn btn--primary btn--lg anim--fade-in-up">
+                            Agendar uma Conversa &nbsp;→
+                        </a>
+                        <a href="https://instagram.com" class="btn btn--outline btn--lg anim--fade-in-up">
+                            Ver no Instagram
+                        </a>
+                    </div>
+
+                    <hr class="divider po-divider-cta">
+
+                    <div class="grid-3">
+                        <div>
+                            <p class="type--label tracking-widest text-muted uppercase po-mb-3">E-mail</p>
+                            <p class="type--body-lg font-serif">contato@biancacarvalho.com.br</p>
+                        </div>
+                        <div>
+                            <p class="type--label tracking-widest text-muted uppercase po-mb-3">Instagram</p>
+                            <p class="type--body-lg font-serif">@biancacarvalho.organizer</p>
+                        </div>
+                        <div>
+                            <p class="type--label tracking-widest text-muted uppercase po-mb-3">Localização</p>
+                            <p class="type--body-lg font-serif">Patrocínio - Minas Gerais</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════════
+             FOOTER — Simples
+        ══════════════════════════════════════ -->
+            <footer class="section--sm po-footer">
+                <div class="container">
+                    <div class="flex-between flex-wrap po-gap-4">
+                        <div>
+                            <p class="demo-logo font-serif po-mb-2">Bianca Carvalho</p>
+                            <p class="type--caption text-muted tracking-widest uppercase">Personal Organizer</p>
+                        </div>
+                        <nav class="po-footer-nav">
+                            <a href="#quem-eu-sou" class="nav-editorial__link">Quem Eu Sou</a>
+                            <a href="#servicos" class="nav-editorial__link">Serviços</a>
+                            <a href="#antes-depois" class="nav-editorial__link">Transformações</a>
+                            <a href="#contato" class="nav-editorial__link">Contato</a>
+                        </nav>
+                        <p class="type--caption text-muted">© 2026 Bianca Carvalho. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </main>
+
+    <button class="back-top" id="backTop" aria-label="Voltar ao topo">↑</button>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
